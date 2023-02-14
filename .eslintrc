@@ -1,0 +1,56 @@
+{
+  // This project is using the airbnb style guide for linting rules
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "import/extensions":                    "off",
+    "import/no-unresolved":                 [0],
+    "import/no-extraneous-dependencies":    [0],
+    "import/prefer-default-export":         [0],
+    "jsx-a11y/anchor-is-valid":             ["error", { "components": ["Link"], "specialLink": [ "hrefLeft", "hrefRight" ], "aspects": ["invalidHref", "preferButton"] }],
+    "prettier/prettier":                    ["error"],
+    "react-hooks/exhaustive-deps":          "warn",   // To check effect dependencies
+    "react-hooks/rules-of-hooks":           "error",  // To check rules of Hooks
+    "react/forbid-prop-types":              [0],
+    "react/function-component-definition":  [1, { "namedComponents": "arrow-function" }],
+    "react/jsx-boolean-value":              [1, "always"],
+    "react/jsx-filename-extension":         [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-indent-props":               [2, 4],
+    "react/jsx-indent":                     [2, 4],
+    "react/jsx-one-expression-per-line":    [0],
+    "react/jsx-props-no-spreading":         [0],
+    "react/prefer-stateless-function":      [1],
+    "react/react-in-jsx-scope":             "off",
+    "react/static-property-placement":      [1, "property assignment"],
+
+    "no-shadow":                            "off"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "paths": ["./"]
+      }
+    }
+  }
+}
