@@ -1,0 +1,10 @@
+.app {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    font-family: sans-serif;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+}
